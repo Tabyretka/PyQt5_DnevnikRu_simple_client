@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui.ui'
+# Form implementation generated from reading ui file '.\archive\ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.setFixedSize(442, 363)
+        MainWindow.resize(442, 363)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -41,8 +41,11 @@ class Ui_MainWindow(object):
         self.actionChangeDate.setObjectName("actionChangeDate")
         self.actionLogin_2 = QtWidgets.QAction(MainWindow)
         self.actionLogin_2.setObjectName("actionLogin_2")
+        self.actionMarks = QtWidgets.QAction(MainWindow)
+        self.actionMarks.setObjectName("actionMarks")
         self.menumenu.addAction(self.actionChangeDate)
         self.menumenu.addAction(self.actionLogin_2)
+        self.menumenu.addAction(self.actionMarks)
         self.menuBar.addAction(self.menumenu.menuAction())
 
         self.retranslateUi(MainWindow)
@@ -56,3 +59,4 @@ class Ui_MainWindow(object):
         self.actionLogin.setText(_translate("MainWindow", "Login"))
         self.actionChangeDate.setText(_translate("MainWindow", "Change date"))
         self.actionLogin_2.setText(_translate("MainWindow", "Login"))
+        self.actionMarks.setText(_translate("MainWindow", "Marks"))

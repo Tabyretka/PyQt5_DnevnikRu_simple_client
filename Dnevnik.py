@@ -50,3 +50,25 @@ class DnevnikRu:
                     return None
         except Exception:
             raise DnevnikError("Не удалось получить домашнее задание", "HomeworkParseError")
+
+    def marks(self, index="1", period=""):
+        url = f"https://schools.dnevnik.ru/marks.aspx?school={self.school}&index={index}&tab=period&period={period}&homebasededucation=False"
+        rs = self.session.get(url=url, headers={"Referer": url}).text
+        try:
+            soup = BeautifulSoup(rs, 'lxml')
+            table = soup.find('table', {'class': "grid gridLines vam marks"})
+            content = []
+            all_rows = table.findAll('tr')
+            for row in all_rows:
+                content.append([])
+                all_cols = row.findAll('td')
+                for col in all_cols:
+                    the_strings = [str(s) for s in col.findAll(text=True)]
+                    the_text = ''.join(the_strings)
+                    content[-1].append(the_text)
+            content = tuple([a for a in content if a != []])
+            for mark in content:
+                mark[2] = mark[2].replace(" ", "")
+            return content
+        except DnevnikError:
+            raise DnevnikError("Какой-то из параметров введен неверно", "Parameters Error")

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/LoginUi.ui'
+# Form implementation generated from reading ui file '.\archive\LoginUi.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog2(object):
     def setupUi(self, Dialog2):
         Dialog2.setObjectName("Dialog2")
-        Dialog2.setFixedSize(228, 119)
+        Dialog2.resize(228, 119)
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog2)
         self.buttonBox.setGeometry(QtCore.QRect(-130, 80, 341, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
@@ -30,6 +30,9 @@ class Ui_Dialog2(object):
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit_2 = QtWidgets.QLineEdit(Dialog2)
         self.lineEdit_2.setGeometry(QtCore.QRect(10, 40, 201, 20))
+        self.lineEdit_2.setInputMask("")
+        self.lineEdit_2.setText("")
+        self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lineEdit_2.setObjectName("lineEdit_2")
 
         self.retranslateUi(Dialog2)

@@ -45,6 +45,7 @@
     </property>
     <addaction name="actionChangeDate"/>
     <addaction name="actionLogin_2"/>
+    <addaction name="actionMarks"/>
    </widget>
    <addaction name="menumenu"/>
   </widget>
@@ -66,6 +67,11 @@
   <action name="actionLogin_2">
    <property name="text">
     <string>Login</string>
+   </property>
+  </action>
+  <action name="actionMarks">
+   <property name="text">
+    <string>Marks</string>
    </property>
   </action>
  </widget>
