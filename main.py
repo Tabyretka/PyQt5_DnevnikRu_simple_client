@@ -38,7 +38,7 @@ class MyWidget(QMainWindow, Ui_MainWindow):
         self.actionLogin_2.triggered.connect(self.loginfunc)
 
     def change_browser_content(self):
-        date = f"{self.date.day}.{self.date.month}.{self.date.year}"
+        date = f"{self.date.day + 1}.{self.date.month}.{self.date.year}"
         res = f'{date}\n'
 
         homework = dnevnik.homework({self.date.year}, f"{date}", f"{date}")
